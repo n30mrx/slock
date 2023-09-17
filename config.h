@@ -1,25 +1,22 @@
 /* user and group to drop privileges to */
-static const char *user  = "nobody";
-static const char *group = "nobody";
+static const char *user  = "x";
+static const char *group = "x";
 
 static const char *colorname[NUMCOLS] = {
 	[INIT] =   "black",     /* after initialization */
-	[INPUT] =  "#6832a8",   /* during input */
+	[INPUT] =  "#005577",   /* during input */
 	[FAILED] = "#CC3333",   /* wrong password */
-	[CAPS] = "red",         /* CapsLock on */
 };
 
 /* treat a cleared input like a wrong password (color) */
 static const int failonclear = 1;
 
-/* time in seconds before the monitor shuts down */
+/*Enable blur*/
+#define BLUR
+/*Set blur radius*/
+static const int blurRadius=5;
+/*Enable Pixelation*/
+//#define PIXELATION
+/*Set pixelation radius*/
+static const int pixelSize=0;
 static const int monitortime = 5;
-
-/* default message */
-static const char * message = "The quieter you become, the more you are able to hear";
-
-/* text color */
-static const char * text_color = "#ffffff";
-
-/* text size (must be a valid size) */
-static const char * font_name = "6x13";
